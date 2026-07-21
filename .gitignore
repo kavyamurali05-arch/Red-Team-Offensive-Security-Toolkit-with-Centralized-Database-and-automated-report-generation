@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Project-generated data (created at runtime) ---
+workspace/
+ostk_logs.db
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Logs & temporary output ---
+*.log
+*.tmp
+*.bak
+
+# --- Reports generated during testing (keep only sample screenshots, not raw scan data) ---
+*_report_*.html
+*_report_*.pdf
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- Environment / secrets ---
+.env
