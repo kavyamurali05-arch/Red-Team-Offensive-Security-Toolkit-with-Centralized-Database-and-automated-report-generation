@@ -1,4 +1,4 @@
-# 🛡️ Red Team Offensive Security Toolkit (OSTK)
+#  Red Team Offensive Security Toolkit (OSTK)
 
 A lightweight, Python-based Red Team / VAPT (Vulnerability Assessment and Penetration Testing) toolkit that automates common offensive security workflows. It wraps industry-standard tools (Nmap, Whois, Nikto, SQLMap, Metasploit) behind a single menu-driven CLI, records every action in a centralized SQLite database, and automatically generates per-run and consolidated engagement reports (TXT / HTML / PDF).
 
@@ -243,6 +243,6 @@ kavyadevimurali@gmail.com
 
 ---
 
-## ⚖️ License
+##  License
 
 This project is released under the [MIT License](./LICENSE). It is intended for educational use only.
