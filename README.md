@@ -2,11 +2,11 @@
 
 A lightweight, Python-based Red Team / VAPT (Vulnerability Assessment and Penetration Testing) toolkit that automates common offensive security workflows. It wraps industry-standard tools (Nmap, Whois, Nikto, SQLMap, Metasploit) behind a single menu-driven CLI, records every action in a centralized SQLite database, and automatically generates per-run and consolidated engagement reports (TXT / HTML / PDF).
 
-> ⚠️ **Disclaimer:** This toolkit is built strictly for **educational purposes and authorized penetration testing engagements only**. Do not use it against any system without explicit written permission. The author is not responsible for any misuse of this tool.
+>  **Disclaimer:** This toolkit is built strictly for **educational purposes and authorized penetration testing engagements only**. Do not use it against any system without explicit written permission. The author is not responsible for any misuse of this tool.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Penetration testers usually need to run several independent tools (Nmap, Nikto, SQLMap, Metasploit, etc.) and then manually collect the scattered outputs to write a report. This process is slow, error-prone, and hard to audit.
 
@@ -14,7 +14,7 @@ Penetration testers usually need to run several independent tools (Nmap, Nikto, 
 
 ---
 
-## ❗ Problem Statement
+##  Problem Statement
 
 - Running multiple security tools requires many separate commands, and their outputs get scattered across the terminal and different files.
 - Manually preparing a penetration testing report (copy-pasting terminal output) is time-consuming and error-prone.
@@ -23,7 +23,7 @@ Penetration testers usually need to run several independent tools (Nmap, Nikto, 
 
 ---
 
-## 🎯 Objective
+## Objective
 
 To build a single CLI-based toolkit that:
 - Orchestrates common recon, scanning, and exploitation tools.
@@ -33,22 +33,22 @@ To build a single CLI-based toolkit that:
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔍 **Nmap Integration** — Quick, service version, aggressive, full-TCP, and custom scan profiles with XML output for automated parsing.
-- 🌐 **Whois Lookup** — Domain registration and ownership information.
-- 🕸️ **Nikto Web Scanner** — Default, tuned, and custom web vulnerability scans.
-- 💉 **SQLMap Integration** — Batch, crawl, dump, and custom SQL injection testing modes.
-- 🧨 **Metasploit Integration** — Interactive `msfconsole` sessions recorded to a log file using the `script` utility.
-- 🗄️ **Centralized SQLite Database** — Every tool run is logged with the command used, output file path, SHA-256 hash, exit code, and timestamp.
-- 📝 **Automated Report Generation** — Per-run TXT reports and a consolidated HTML/PDF engagement report, complete with auto-extracted findings and a heuristic risk rating (LOW / MEDIUM / HIGH / CRITICAL).
-- 🔐 **Evidence Integrity** — SHA-256 checksums for every output file to preserve chain of custody.
-- 📁 **Per-Engagement Workspace** — Each engagement gets its own `logs/`, `exports/`, and `evidence/` folders.
-- 💻 **Simple Command-Line Interface** — Beginner-friendly, menu-driven navigation.
+-  **Nmap Integration** — Quick, service version, aggressive, full-TCP, and custom scan profiles with XML output for automated parsing.
+-  **Whois Lookup** — Domain registration and ownership information.
+-  **Nikto Web Scanner** — Default, tuned, and custom web vulnerability scans.
+-  **SQLMap Integration** — Batch, crawl, dump, and custom SQL injection testing modes.
+-  **Metasploit Integration** — Interactive `msfconsole` sessions recorded to a log file using the `script` utility.
+-  **Centralized SQLite Database** — Every tool run is logged with the command used, output file path, SHA-256 hash, exit code, and timestamp.
+-  **Automated Report Generation** — Per-run TXT reports and a consolidated HTML/PDF engagement report, complete with auto-extracted findings and a heuristic risk rating (LOW / MEDIUM / HIGH / CRITICAL).
+-  **Evidence Integrity** — SHA-256 checksums for every output file to preserve chain of custody.
+-  **Per-Engagement Workspace** — Each engagement gets its own `logs/`, `exports/`, and `evidence/` folders.
+-  **Simple Command-Line Interface** — Beginner-friendly, menu-driven navigation.
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```
  User (Operator)
@@ -82,7 +82,7 @@ To build a single CLI-based toolkit that:
 
 ---
 
-## 🧰 Technologies & Tools Used
+##  Technologies & Tools Used
 
 | Category            | Technology / Tool                                                   |
 |----------------------|-----------------------------------------------------------------------|
@@ -97,7 +97,7 @@ To build a single CLI-based toolkit that:
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 Red-Team-Offensive-Security-Toolkit/
@@ -125,7 +125,7 @@ Red-Team-Offensive-Security-Toolkit/
 
 ---
 
-## ⚙️ Installation Steps
+##  Installation Steps
 
 ### 1. Prerequisites
 - Python 3.10 or higher
@@ -156,7 +156,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
 ```bash
 python3 ostk.py
@@ -175,7 +175,7 @@ You will be prompted to enter an engagement name (e.g. `CollegeMiniProject`). Th
 
 ---
 
-## 🧪 Sample Usage
+##  Sample Usage
 
 **Example: Running an Nmap scan**
 ```
@@ -200,17 +200,17 @@ Select: 4.2
 
 ---
 
-## 📊 Output / Results
+##  Output / Results
 
 - **Per-run TXT report** — Contains the command used, a trimmed log preview, auto-parsed findings, a heuristic risk rating, and proof-of-concept details.
 - **Consolidated HTML/PDF report** — A chronological summary of every tool run in the engagement, including a summary table with tool name, exit code, timestamp, output path, and SHA-256 hash.
 - **SQLite database (`ostk_logs.db`)** — Full audit trail of every command executed during the engagement.
 
-📸 Screenshots of the CLI menu, individual tool runs (Nmap, Whois, Nikto, SQLMap, Metasploit), and sample reports are available in the [`/screenshots`](./screenshots) folder.
+ Screenshots of the CLI menu, individual tool runs (Nmap, Whois, Nikto, SQLMap, Metasploit), and sample reports are available in the [`/screenshots`](./screenshots) folder.
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - Extend SHA-256 evidence integrity checks to XML, SQLMap directories, and Metasploit logs, with an automated hash-verification routine.
 - Normalize the single `logs` table into separate relational tables (`engagements`, `targets`, `scans`, `findings`, `evidence`).
@@ -224,16 +224,15 @@ Select: 4.2
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Kavya Devi M.S.**
-📧 [Add your email]
-🔗 [Add your LinkedIn]
-🔗 [Add your GitHub profile link]
+kavyadevimurali@gmail.com
+
 
 ---
 
-## 📚 References
+##  References
 
 - [Nmap](https://nmap.org)
 - [SQLMap](https://sqlmap.org)
