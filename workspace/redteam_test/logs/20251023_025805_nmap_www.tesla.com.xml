@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Thu Oct 23 02:58:05 2025 as: /usr/lib/nmap/nmap -&#45;privileged -p- -sV -&#45;version-light -oX /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_025805_nmap_www.tesla.com.xml www.tesla.com -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -p- -sV -&#45;version-light -oX /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_025805_nmap_www.tesla.com.xml www.tesla.com" start="1761202685" startstr="Thu Oct 23 02:58:05 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="23.213.210.206" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.tesla.com" type="user"/>
+</hostnames>
+</hosthint>
+<taskprogress task="SYN Stealth Scan" time="1761203104" percent="62.28" remaining="254" etc="1761203358"/>
+<host starttime="1761202686" endtime="1761203330"><status state="up" reason="reset" reason_ttl="255"/>
+<address addr="23.213.210.206" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.tesla.com" type="user"/>
+<hostname name="a23-213-210-206.deploy.static.akamaitechnologies.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-79,81-442,444-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="AkamaiGHost" extrainfo="Akamai&apos;s HTTP Acceleration/Mirror service" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="AkamaiGHost" extrainfo="Akamai&apos;s HTTP Acceleration/Mirror service" tunnel="ssl" method="probed" conf="10"/></port>
+</ports>
+<times srtt="89344" rttvar="33471" to="223228"/>
+</host>
+<runstats><finished time="1761203330" timestr="Thu Oct 23 03:08:50 2025" summary="Nmap done at Thu Oct 23 03:08:50 2025; 1 IP address (1 host up) scanned in 645.68 seconds" elapsed="645.68" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

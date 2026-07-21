@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Nov  2 03:17:49 2025 as: /usr/lib/nmap/nmap -&#45;privileged -p- -sV -&#45;version-light -oX /home/kali/offensive_toolkit/workspace/review.demo/logs/20251102_031749_nmap_flipkart.com.xml flipkart.com -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -p- -sV -&#45;version-light -oX /home/kali/offensive_toolkit/workspace/review.demo/logs/20251102_031749_nmap_flipkart.com.xml flipkart.com" start="1762071469" startstr="Sun Nov  2 03:17:49 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<runstats><finished time="1762071489" timestr="Sun Nov  2 03:18:09 2025" summary="Nmap done at Sun Nov  2 03:18:09 2025; 0 IP addresses (0 hosts up) scanned in 20.29 seconds" elapsed="20.29" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

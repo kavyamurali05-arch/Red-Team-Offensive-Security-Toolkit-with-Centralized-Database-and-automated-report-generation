@@ -1,0 +1,1 @@
+http://testphp.vulnweb.com/login.php?id=1 (GET)  # /usr/bin/sqlmap -u http://testphp.vulnweb.com/login.php?id=1 --batch --output-dir=/home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_040838_sqlmap

@@ -1,0 +1,48 @@
+──────────────────────────────────────────────
+Per-run Vulnerability Report
+──────────────────────────────────────────────
+Engagement: redteam_test
+Tool: Nikto
+Date: 2025-10-23 03:56:58
+
+Command Executed:
+nikto -h http://testphp.vulnweb.com -Tuning 123 -output /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_035204_nikto_http_testphp.vulnweb.com.txt
+
+Execution Log (trimmed preview):
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          44.228.249.3
++ Target Hostname:    testphp.vulnweb.com
++ Target Port:        80
++ Start Time:         2025-10-23 03:52:32 (GMT-4)
+---------------------------------------------------------------------------
++ Server: nginx/1.19.0
++ /: Retrieved x-powered-by header: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1.
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ /clientaccesspolicy.xml contains a full wildcard entry. See: https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95)?redirectedfrom=MSDN
++ /clientaccesspolicy.xml contains 12 lines which should be manually viewed for improper domains or wildcards. See: https://www.acunetix.com/vulnerabilities/web/insecure-clientaccesspolicy-xml-file/
++ /crossdomain.xml contains a full wildcard entry. See: http://jeremiahgrossman.blogspot.com/2008/05/crossdomainxml-invites-cross-site.html
++ ERROR: Error limit (20) reached for host, giving up. Last error: error reading HTTP response
++ Scan terminated: 20 error(s) and 6 item(s) reported on remote host
++ End Time:           2025-10-23 03:56:58 (GMT-4) (266 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+Detailed Findings:
+- + Server: nginx/1.19.0
+- + /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
+- + /clientaccesspolicy.xml contains 12 lines which should be manually viewed for improper domains or wildcards. See: https://www.acunetix.com/vulnerabilities/web/insecure-clientaccesspolicy-xml-file/
+
+Risk Rating: LOW
+
+Description:
++ Server: nginx/1.19.0
+
+Proof of Concept (PoC):
+Command used: nikto -h http://testphp.vulnweb.com -Tuning 123 -output /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_035204_nikto_http_testphp.vulnweb.com.txt
+
+
+Notes:
+- This report is auto-generated and heuristic. Validate findings manually.

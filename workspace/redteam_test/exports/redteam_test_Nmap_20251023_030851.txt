@@ -1,0 +1,42 @@
+──────────────────────────────────────────────
+Per-run Vulnerability Report
+──────────────────────────────────────────────
+Engagement: redteam_test
+Tool: Nmap
+Date: 2025-10-23 03:08:51
+
+Command Executed:
+nmap -p- -sV --version-light www.tesla.com -oX /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_025805_nmap_www.tesla.com.xml
+
+Execution Log (trimmed preview):
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-23 02:58 EDT
+Stats: 0:06:59 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 62.28% done; ETC: 03:09 (0:04:14 remaining)
+Nmap scan report for www.tesla.com (23.213.210.206)
+Host is up (0.089s latency).
+Other addresses for www.tesla.com (not scanned): 2600:140f:5e00:182::700 2600:140f:5e00:189::700
+rDNS record for 23.213.210.206: a23-213-210-206.deploy.static.akamaitechnologies.com
+Not shown: 65533 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+443/tcp open  ssl/http AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 645.68 seconds
+
+
+Detailed Findings:
+- 80/tcp  open  http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+- 443/tcp open  ssl/http AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+Risk Rating: MEDIUM
+
+Description:
+80/tcp  open  http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+Proof of Concept (PoC):
+Command used: nmap -p- -sV --version-light www.tesla.com -oX /home/kali/offensive_toolkit/workspace/redteam_test/logs/20251023_025805_nmap_www.tesla.com.xml
+
+
+Notes:
+- This report is auto-generated and heuristic. Validate findings manually.

@@ -1,0 +1,27 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-23 03:17 EDT
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+WARNING: RST from 2.18.55.207 port 443 -- is this port really open?
+Nmap scan report for tesla.com (2.18.55.207)
+Host is up (0.043s latency).
+Other addresses for tesla.com (not scanned): 2.18.50.207 2.18.54.207 23.7.244.207 2.18.48.207 2.18.53.207 23.40.100.207 2.18.52.207 2.18.49.207 2.18.51.207 64:ff9b::212:30cf 64:ff9b::212:31cf 64:ff9b::1728:64cf 64:ff9b::212:34cf 64:ff9b::212:35cf 64:ff9b::212:36cf 64:ff9b::212:37cf 64:ff9b::212:32cf 64:ff9b::212:33cf 64:ff9b::1707:f4cf
+rDNS record for 2.18.55.207: a2-18-55-207.deploy.static.akamaitechnologies.com
+Not shown: 65533 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  tcpwrapped
+443/tcp open  tcpwrapped
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: GNU Hurd 0.3 (89%), Oracle Virtualbox Slirp NAT bridge (89%), IBM AIX 5.3 (87%), Ricoh Aficio MP C4501 printer (87%), Avaya P130 workgroup switch (87%), FreeBSD 4.7-STABLE (87%), Slingmedia Slingbox AV TV over IP gateway (87%), AT&T BGW210 voice gateway (87%), Aastra 57i VoIP phone (85%), Netgear RT311 broadband router (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 370.70 seconds

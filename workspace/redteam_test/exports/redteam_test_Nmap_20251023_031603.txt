@@ -1,0 +1,31 @@
+──────────────────────────────────────────────
+Per-run Vulnerability Report
+──────────────────────────────────────────────
+Engagement: redteam_test
+Tool: Nmap
+Date: 2025-10-23 03:16:03
+
+Command Executed:
+nmap -sS -sV -O -p 1-65535 -T4 -oX custom_nmap.xml tesla.com
+
+Execution Log (trimmed preview):
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-23 03:15 EDT
+Failed to resolve "tesla.com".
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 20.61 seconds
+
+
+Detailed Findings:
+- No auto-parsed findings.
+
+Risk Rating: MEDIUM
+
+Description:
+No structured findings auto-extracted. Validate manually.
+
+Proof of Concept (PoC):
+Command used: nmap -sS -sV -O -p 1-65535 -T4 -oX custom_nmap.xml tesla.com
+
+
+Notes:
+- This report is auto-generated and heuristic. Validate findings manually.
