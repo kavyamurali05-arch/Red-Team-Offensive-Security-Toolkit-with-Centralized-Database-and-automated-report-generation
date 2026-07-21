@@ -226,8 +226,8 @@ Select: 4.2
 
 ##  Author
 
-**Kavya Devi M.S.**
-kavyadevimurali@gmail.com
+**Name: Kavya Devi M.S.**
+  Email: kavyadevimurali@gmail.com
 
 
 ---
