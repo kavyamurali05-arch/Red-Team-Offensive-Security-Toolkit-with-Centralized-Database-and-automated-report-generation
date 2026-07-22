@@ -215,11 +215,6 @@ Select: 4.2
 - Normalize the single `logs` table into separate relational tables (`engagements`, `targets`, `scans`, `findings`, `evidence`).
 - Add automated unit tests (using `pytest`) for the parsers to prevent regressions when tool output formats change.
 - Add a `--lab-mode` flag to restrict scans to authorized/private network ranges only.
-- Replace remaining `shell=True` subprocess calls with safer, structured argument handling.
-- Migrate from SQLite to PostgreSQL to support concurrent multi-user usage.
-- Build a Flask/FastAPI-based web dashboard for visualizing scans and findings.
-- Integrate CVE/CVSS lookups to strengthen the risk-scoring engine beyond text heuristics.
-- Improve credential-extraction regex patterns from SQLMap output to reduce false positives.
 
 ---
 
