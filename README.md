@@ -206,7 +206,6 @@ Select: 4.2
 - **Consolidated HTML/PDF report** — A chronological summary of every tool run in the engagement, including a summary table with tool name, exit code, timestamp, output path, and SHA-256 hash.
 - **SQLite database (`ostk_logs.db`)** — Full audit trail of every command executed during the engagement.
 
- Screenshots of the CLI menu, individual tool runs (Nmap, Whois, Nikto, SQLMap, Metasploit), and sample reports are available in the [`/screenshots`](./screenshots) folder.
 
 ---
 
@@ -227,6 +226,7 @@ Select: 4.2
 ##  Author
 
 **Name: Kavya Devi M.S.**
+
   Email: kavyadevimurali@gmail.com
 
 
